@@ -1,0 +1,16 @@
+body {
+    background-color: #282D35;
+    font-family: 'Inter';
+    color: white;
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+  }
+  
+  html { 
+    height: 100vh;
+  }
+  
+  div#root {
+    height: 100vh;
+  }

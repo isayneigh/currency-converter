@@ -1,0 +1,27 @@
+.form-container > select {
+    margin-right: 5px;
+}
+
+input, select {
+    background-color: #0000058a;
+    color: black;
+    border: none;
+    border-bottom: 1px solid #fafafa81;
+    font-family: Inter, sans-serif;
+    color: white;
+    font-weight: lighter;
+    font-size: 24px;
+    height: 50px;
+    width: 200px;
+}
+
+select {
+    width: 400px;
+    margin-right: 15px;
+    font-size: 21px;
+    font-weight: lighter;
+}
+
+input:active, input:focus-within {
+    border: none;
+}
