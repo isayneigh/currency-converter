@@ -15,7 +15,6 @@ export default function CurrencyConverterFrom(props) {
         const code = $event.target.value;
         setCode(code);
         setSymbol(getSymbolFromCurrency(code))
-        console.log(currencyValue)
         props.valueChanged(currencyValue, code);
     }
 

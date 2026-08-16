@@ -18,16 +18,11 @@ export default function CurrencyConverter(props) {
         fetch("https://open.er-api.com/v6/latest/" + (!fromDestination ? fromCurrency : toCurrency))
         .then(result => result.json())
         .then((json) => {
-            console.log((!fromDestination ? fromCurrency : toCurrency));
             var currency = (fromDestination ? fromCurrency : toCurrency);
-            console.log(currency);
             if (!fromDestination) {
                 var calculatedToAmount = fromAmount * json.rates[currency];
-                console.log(calculatedToAmount)
                 setToAmount(isNaN(calculatedToAmount) ? '' : calculatedToAmount);     
             } else {
-                console.log(json.rates);
-                console.log(toAmount)
                 var calculatedFromAmount = toAmount * json.rates[currency];
                 setFromAmount(isNaN(calculatedFromAmount) ? '' : calculatedFromAmount);     
             }
