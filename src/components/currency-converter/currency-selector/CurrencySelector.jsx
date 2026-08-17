@@ -1,16 +1,14 @@
 import { data } from "currency-codes";
 import getSymbolFromCurrency from "currency-symbol-map";
 import { v4 as uuidv4 } from 'uuid';
-import React from "react";
-import "./CurrencyConverterFrom.css"
+import { useState } from "react";
+import "./CurrencySelector.css"
 import CurrencyInput from 'react-currency-input-field';
-import TextField from '@mui/material/TextField';
-import Autocomplete from '@mui/material/Autocomplete';
 
-export default function CurrencyConverterFrom(props) {
-    const [code, setCode] = React.useState("USD");
-    const [symbol, setSymbol] = React.useState("$");
-    const [currencyValue, setCurrencyValue] = React.useState(0);
+export default function CurrencySelector(props) {
+    const [code, setCode] = useState("USD");
+    const [symbol, setSymbol] = useState("$");
+    const [currencyValue, setCurrencyValue] = useState(0);
 
     function onCodeChange($event) {
         const code = $event.target.value;
@@ -28,7 +26,7 @@ export default function CurrencyConverterFrom(props) {
             <select onChange={onCodeChange} value={code}>
                 {data.map(c => <option key={uuidv4()} value={c.code}>{c.code} - {c.currency}</option>)}
             </select>
-            <CurrencyInput prefix={symbol} decimalsLimit={2} transformRawValue={(val) => val === undefined ? 0.00 : val} onValueChange={onValueChanged} value={props.convertedValue} defaultValue={''} />        
+            <CurrencyInput prefix={symbol} decimalsLimit={2} transformRawValue={(val) => val === undefined ? 0.00 : val} onValueChange={onValueChanged} value={props.convertedValue} defaultValue={0} />        
         </div>
     )
 }

@@ -31,6 +31,13 @@ select {
     font-weight: lighter;
 }
 
+option {
+    font-size: 21px;
+    width: calc(100% - 30px);
+    font-weight: lighter;
+
+}
+
 input:active, input:focus {
     outline: none;
     outline: #fafafa81 solid 1px;
