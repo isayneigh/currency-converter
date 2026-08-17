@@ -37701,7 +37701,7 @@ var yo = {
       ],
     },
   },
-  oU = `https://isayneigh.github.io/currency-converter/assets/money-Bb4izZ_y.png`;
+  oU = `money-Bb4izZ_y.png`;
 function sU(e) {
   Ua.add(aU);
   var [t, n] = (0, C.useState)(`USD`),
